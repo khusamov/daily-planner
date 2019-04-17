@@ -1,0 +1,17 @@
+.TaskItem {
+	display: flex;
+	&+.active {
+		background-color: aqua;
+	}
+	.hour, .text {
+		padding: 5px;
+	}
+	.hour {
+		width: 100px;
+		border: solid 1px black;
+	}
+	.text {
+		flex: 1 1 auto;
+		border: solid 1px black;
+	}
+}

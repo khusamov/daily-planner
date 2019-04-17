@@ -1,28 +1,38 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import TaskList from './components/TaskList';
+import ITask from './components/TaskList/ITask';
+import IMenuItem from './components/TaskList/Menu/IMenuItem';
+import LocalStorage from './model/LocalStorage';
 
-class App extends Component {
+const localStorage = new LocalStorage;
+let tasks: ITask[] = localStorage.tasks;
+
+interface IAppState {
+	tasks: ITask[];
+}
+
+export default class App extends Component<{}, IAppState> {
+	state: IAppState = {tasks};
+
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo"/>
-					<p>
-						Edit <code>src/App.tsx</code> and save to reload.
-					</p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Learn React
-					</a>
-				</header>
+				<TaskList tasks={tasks} onChange={this.onTaskListChange} />
 			</div>
 		);
 	}
-}
 
-export default App;
+	private onTaskListChange = (taskItemHour: number, menuItem: IMenuItem) => {
+		const tasks = Array(...this.state.tasks);
+
+		const text = menuItem.action === 'delete' ? '' : menuItem.text;
+		const foundTask = tasks.find(task => task.hour === taskItemHour);
+		if (foundTask) {
+			foundTask.text = text;
+		}
+
+		this.setState({tasks});
+		localStorage.tasks = tasks;
+	};
+}
