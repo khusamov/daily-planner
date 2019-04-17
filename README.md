@@ -1,6 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Day Planner
+
+## Инструкция для конечного пользователя
+
+Установить [NodeJS 10](https://nodejs.org/en/).  
+Папку build распаковать.  
+В ней запустить команду `npx http-server`.  
+Зайти на любой из предложенных адресов.  
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
@@ -43,9 +52,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Инструкция для конечного пользователя
-
-Установить [NodeJS 10](https://nodejs.org/en/).  
-Папку build распаковать.  
-В ней запустить команду `npx http-server`.  
-Зайти на любой из предложенных адресов.  
