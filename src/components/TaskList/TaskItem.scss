@@ -5,6 +5,7 @@
 	color: white;
 	font-size: 3.7vh;
 	font-weight: bold;
+	border-bottom: solid 1px white;
 	&+.active {
 		background-color: #008c8c;
 	}
@@ -13,10 +14,8 @@
 	}
 	.hour {
 		width: 100px;
-		border: solid 1px white;
 	}
 	.text {
 		flex: 1 1 auto;
-		border: solid 1px white;
 	}
 }
