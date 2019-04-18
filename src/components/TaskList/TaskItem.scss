@@ -3,11 +3,13 @@
 	flex: 1 1 auto;
 	background-color: black;
 	color: white;
+	font-size: 3.7vh;
+	font-weight: bold;
 	&+.active {
 		background-color: #008c8c;
 	}
 	.hour, .text {
-		padding: 5px;
+		padding: 3px 9px;
 	}
 	.hour {
 		width: 100px;
