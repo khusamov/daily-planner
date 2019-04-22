@@ -17,13 +17,19 @@ const items: IMenuItem[] = [{
 }, {
 	text: 'ПСК'
 }, {
-	text: 'Окнотэк'
+	text: 'Стелпласт'
 }, {
 	text: 'Ecohouse'
 }, {
+	text: 'Окна Санни'
+}, {
 	text: 'Пластокно'
 }, {
-	text: 'Московская оконница'
+	text: 'Московская Оконница'
+}, {
+	text: 'Панокна'
+}, {
+	text: 'Другое'
 }];
 
 export default class Menu extends Component<IMenuProps> {
