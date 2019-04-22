@@ -15,6 +15,8 @@ const items: IMenuItem[] = [{
 	text: 'Удалить',
 	action: 'delete'
 }, {
+	type: 'divider'
+}, {
 	text: 'ПСК'
 }, {
 	text: 'Стелпласт'
@@ -60,7 +62,12 @@ export default class Menu extends Component<IMenuProps> {
 							{
 								items.map((item, index) => (
 									<tr key={index} data-index={index}>
-										<td className='item' onClick={this.onMenuItemClick}>{item.text}</td>
+										{
+											{
+												item: <td className='item' onClick={this.onMenuItemClick}>{item.text}</td>,
+												divider: <td className='divider' />
+											}[item.type || 'item' ]
+										}
 									</tr>
 								))
 							}
