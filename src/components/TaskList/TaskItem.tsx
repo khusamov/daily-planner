@@ -5,12 +5,13 @@ import ITask from './ITask';
 
 interface ITaskItemProps {
 	task: ITask;
+	active: boolean;
 }
 
 export default class TaskItem extends Component<ITaskItemProps> {
 	render() {
 		const className = classNames('TaskItem', {
-			active: new Date().getHours() === this.props.task.hour
+			active: this.props.active
 		});
 		return (
 			<div className={className} data-hour={this.props.task.hour}>

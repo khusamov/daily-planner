@@ -1,14 +1,17 @@
 {
-  "name": "my-app",
+  "name": "day-planner",
+  "description": "Планнер дня для setup-okna.ru",
   "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.7",
+    "@types/fbemitter": "^2.0.32",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.4",
     "@types/react": "16.8.13",
     "@types/react-dom": "16.8.4",
     "classnames": "^2.2.6",
+    "fbemitter": "^2.1.1",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

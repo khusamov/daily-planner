@@ -8,6 +8,7 @@ import './TaskList.scss';
 interface ITaskListProps {
 	onChange: (taskItemHour: number, menuItem: IMenuItem) => void;
 	tasks: ITask[];
+	activeHour: number;
 }
 
 interface ITaskListState {
@@ -45,7 +46,15 @@ export default class TaskList extends Component<ITaskListProps, ITaskListState> 
 						/>
 					)
 				}
-				{this.props.tasks.map((task, index) => <TaskItem key={index} task={task} />)}
+				{
+					this.props.tasks.map((task, index) => (
+						<TaskItem
+							key={index}
+							task={task}
+							active={this.props.activeHour === task.hour}
+						/>
+					))
+				}
 			</div>
 		);
 	}
