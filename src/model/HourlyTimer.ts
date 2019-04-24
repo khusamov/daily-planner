@@ -22,6 +22,7 @@ export default class HourlyTimer {
 	}
 
 	private setInterval() {
+		this.onTick();
 		window.setInterval(this.onTick.bind(this), 60 * 60 * 1000); // Интервал один час.
 	}
 
