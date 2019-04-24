@@ -36,7 +36,7 @@ export default class TaskList extends Component<ITaskListProps, ITaskListState> 
 
 	render() {
 		return (
-			<div className='TaskList' onClick={this.onRootDivClick}>
+			<div className='TaskList' onContextMenu={this.onRootDivClick}>
 				{
 					this.state.menu.visibled && (
 						<Menu
@@ -82,6 +82,9 @@ export default class TaskList extends Component<ITaskListProps, ITaskListState> 
 	};
 
 	private onRootDivClick = (event: MouseEvent<HTMLDivElement>) => {
+
+		event.preventDefault();
+
 		let taskItemHour = 0;
 
 		const taskItemElement = (event.target as HTMLDivElement).parentElement;
