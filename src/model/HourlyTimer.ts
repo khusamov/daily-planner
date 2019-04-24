@@ -7,7 +7,7 @@ export default class HourlyTimer {
 	private emitter = new EventEmitter();
 
 	constructor() {
-		window.setTimeout(this.setInterval.bind(this), HourlyTimer.getNextHourDelay());
+		window.setTimeout(this.setInterval.bind(this), HourlyTimer.getNextHourDelay() + 1);
 	}
 
 	/**
@@ -23,7 +23,7 @@ export default class HourlyTimer {
 
 	private setInterval() {
 		this.onTick();
-		window.setInterval(this.onTick.bind(this), 60 * 60 * 1000); // Интервал один час.
+		window.setInterval(this.onTick.bind(this), 60 * 60 * 1000 + 1); // Интервал один час.
 	}
 
 	private onTick() {
