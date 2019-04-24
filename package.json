@@ -1,7 +1,7 @@
 {
   "name": "day-planner",
   "description": "Планнер дня для setup-okna.ru",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.7",
