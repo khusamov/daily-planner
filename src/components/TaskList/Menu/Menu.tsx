@@ -31,6 +31,8 @@ const items: IMenuItem[] = [{
 }, {
 	text: 'Панокна'
 }, {
+	text: 'Окнотэк'
+}, {
 	text: 'Другое'
 }];
 
