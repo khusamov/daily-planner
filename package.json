@@ -1,8 +1,20 @@
 {
   "name": "day-planner",
-  "description": "Планнер дня для setup-okna.ru",
-  "version": "0.1.4",
   "private": true,
+  "version": "0.1.4",
+  "description": "Планнер дня для setup-okna.ru",
+  "homepage": "http://dayplanner.setup-okna.ru",
+  "author": {
+    "email": "khusamov@yandex.ru",
+    "name": "Sukhrob Khusamov",
+    "url": "http://khusamov.ru"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@types/classnames": "^2.2.7",
     "@types/fbemitter": "^2.0.32",
@@ -17,12 +29,6 @@
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
     "typescript": "3.4.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
